@@ -136,7 +136,7 @@ class HADockermonSwitch(SwitchDevice):
         return 'mdi:docker'
 
     @property
-    def device_state_attributes(self):
+    def extra_state_attributes(self):
         """Set device attributes."""
         return {
             ATTR_STATUS: self._status,
