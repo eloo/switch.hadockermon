@@ -5,5 +5,5 @@
   "dependencies": [],
   "version": "0.1.0",
   "codeowners": ["@ludeeus"],
-  "requirements": ["pydockermon==1.0.0"]
+  "requirements": ["git+https://github.com/eloo/pydockermon.git@master#pydockermon==1.0.2"]
 }
