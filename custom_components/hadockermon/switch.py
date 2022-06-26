@@ -10,7 +10,7 @@ import logging
 import voluptuous as vol
 
 from homeassistant.components.switch import (DOMAIN, PLATFORM_SCHEMA,
-                                             SwitchDevice)
+                                             SwitchEntity)
 from homeassistant.const import (CONF_HOST, CONF_PORT, CONF_NAME,
                                  CONF_USERNAME, CONF_PASSWORD,
                                  CONF_SSL, CONF_VERIFY_SSL)
@@ -77,7 +77,7 @@ async def async_setup_platform(hass, config, async_add_entities,
     async_add_entities(devices, True)
 
 
-class HADockermonSwitch(SwitchDevice):
+class HADockermonSwitch(SwitchEntity):
     """Representation of a HA Dockermon switch."""
 
     def __init__(self, api, device_name, container, host):
