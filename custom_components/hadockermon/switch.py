@@ -57,7 +57,7 @@ async def async_setup_platform(hass, config, async_add_entities,
     device_name = config.get(CONF_NAME)
     containers = config[CONF_CONTAINERS]
     session = async_get_clientsession(hass, verify_ssl)
-    api = API(hass.loop, session, host, port, username, password, ssl)
+    api = API(session, host, port, username, password, ssl)
     devices = []
     await api.list_containers()
     for container in api.all_containers['data']:
